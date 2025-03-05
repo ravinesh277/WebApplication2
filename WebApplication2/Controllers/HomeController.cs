@@ -7,14 +7,18 @@ namespace WebApplication2.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IConfiguration _IConfiguration;
 
-        public HomeController(ILogger<HomeController> logger)
+
+        public HomeController(ILogger<HomeController> logger,IConfiguration ipconfig)
         {
             _logger = logger;
+            this._IConfiguration = ipconfig;
         }
 
         public IActionResult Index()
         {
+            ViewData["Greeting"] = _IConfiguration["Greeting"];
             return View();
         }
 

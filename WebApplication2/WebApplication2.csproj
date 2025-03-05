@@ -4,6 +4,12 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationInsightsResourceId>/subscriptions/94472abe-a682-4c7f-9452-83392adbdddb/resourceGroups/az-resource-g2/providers/microsoft.insights/components/weApp-git</ApplicationInsightsResourceId>
+    <UserSecretsId>07e500dc-78e2-482d-b5fd-b8ae1f2e21f3</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.22.0" />
+  </ItemGroup>
 
 </Project>
